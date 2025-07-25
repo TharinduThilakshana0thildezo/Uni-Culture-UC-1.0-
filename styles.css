@@ -1,0 +1,179 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: #1a1a1a;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 300px;
+    text-align: center;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    position: relative;
+}
+
+.container.sign-in {
+    transform: translateX(-20px) scale(0.95);
+    opacity: 0.9;
+}
+
+.button-group {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+input, select {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-sizing: border-box;
+}
+
+.phone-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 10px auto;
+}
+
+.phone-group select {
+    width: 25%;
+    margin-right: 10px;
+}
+
+.phone-group input {
+    width: 75%;
+    margin-left: 0;
+}
+
+.create-btn {
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.create-btn:hover {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.social-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.social-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.terms {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.particle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    animation: fall linear infinite;
+}
+
+.cursor-effect {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease, opacity 0.1s ease;
+}
+
+@keyframes fall {
+    0% { transform: translateY(-100vh); }
+    100% { transform: translateY(100vh); }
+}
+
+@media (max-width: 400px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+    .phone-group {
+        flex-direction: column;
+        width: 100%;
+    }
+    .phone-group select, .phone-group input {
+        width: 100%;
+        margin: 5px 0;
+    }
+    .social-btn {
+        width: 30px;
+        height: 30px;
+    }
+}
