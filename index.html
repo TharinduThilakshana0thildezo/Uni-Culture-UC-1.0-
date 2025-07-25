@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create an Account</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" id="authContainer">
+        <span class="close-btn" onclick="this.parentElement.style.display='none'">×</span>
+        <div class="button-group">
+            <button onclick="toggleAuth('sign-up')">Sign up</button>
+            <button onclick="toggleAuth('sign-in')">Sign in</button>
+        </div>
+        <h2 id="authTitle">Create an account</h2>
+        <form id="authForm" onsubmit="handleSubmit(event)">
+            <input type="text" id="firstName" value="" placeholder="First name" required>
+            <input type="text" id="lastName" placeholder="Last name" required>
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <div class="phone-group">
+                <select id="countryCode" required>
+                    <option value="Sri Lanka">🇱🇰</option>
+                    <option value="USA">🇺🇸</option>
+                    <option value="India">🇮🇳</option>
+                    <option value="New Zealand">🇳🇿</option>
+                    <option value="Australia">🇦🇺</option>
+                    <option value="UAE">🇦🇪</option>
+                    <option value="Sweden">🇸🇪</option>
+                    <option value="Singapore">🇸🇬</option>
+                    <option value="Denmark">🇩🇰</option>
+                    <option value="Russia">🇷🇺</option>
+                    <option value="Canada">🇨🇦</option>
+                    <option value="Korea">🇰🇷</option>
+                </select>
+                <input type="tel" id="phone" value="" placeholder="Enter Your Number" required>
+            </div>
+            <button type="submit" class="create-btn" id="authButton">Create an account</button>
+        </form>
+        <div>OR SIGN IN WITH</div>
+        <div class="social-buttons">
+            <a href="https://www.google.com" target="_blank" class="social-btn"><img src="https://www.google.com/favicon.ico" alt="Google" style="width: 20px; height: 20px;"></a>
+            <a href="https://www.apple.com" target="_blank" class="social-btn"><img src="https://www.apple.com/favicon.ico" alt="Apple" style="width: 20px; height: 20px;"></a>
+            <a href="https://www.facebook.com" target="_blank" class="social-btn"><img src="https://www.facebook.com/favicon.ico" alt="Facebook" style="width: 20px; height: 20px;"></a>    
+            <a href="https://www.twitter.com" target="_blank" class="social-btn"><img src="https://www.twitter.com/favicon.ico" alt="Twitter" style="width: 20px; height: 20px;"></a>
+            
+        </div>
+        <div class="terms">By creating an account, you agree to our Terms & Service</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
