@@ -57,6 +57,58 @@
         </div>
         <div class="terms">By creating an account, you agree to our Terms & Service</div>
     </div>
+    <div id="particles-js"></div>
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 80
+            },
+            "color": {
+                "value": "#ffffff"
+            },
+            "shape": {
+                "type": "circle"
+            },
+            "opacity": {
+                "value": 0.5
+            },
+            "size": {
+                "value": 3
+            },
+            "line_linked": {
+                "enable": true,
+                "distance": 150,
+                "color": "#ffffff",
+                "opacity": 0.4,
+                "width": 1
+            },
+            "move": {
+                "enable": true,
+                "speed": 3
+            }
+        },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+                "onhover": {
+                    "enable": true,
+                    "mode": "grab"
+                }
+            },
+            "modes": {
+                "grab": {
+                    "distance": 200,
+                    "line_linked": {
+                    "opacity": 0.6
+                    }
+                }
+            }
+        },
+        "retina_detect": true
+    });
+</script>
 </body>
 </html>
