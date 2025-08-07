@@ -10,6 +10,59 @@ body {
     align-items: center;
 }
 
+@keyframes bgShift {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+.header {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background: #1a1a1a(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 10px 20px;
+    }
+.navbar a {
+    color: white;
+    text-decoration: auto;
+    margin-right: 15px;
+    padding: 8px 12px;
+    transition: background 0.3s;
+    }
+.navbar a:hover {
+    background-color: #1a1a1a;
+    }
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+
 .container {
     background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
@@ -110,12 +163,13 @@ input, select {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     padding: 10px;
     margin: 10px;
     border-radius: 10px;
 }
+
 
 .social-btn:hover {
     background: rgba(255, 255, 255, 0.3);

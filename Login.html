@@ -4,9 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create an Account</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="Styles/login.css">
 </head>
 <body>
+    <nav>
+        <div a href="#" class="header">Uni Culture</div>
+    </nav>
+    <div class="header">Uni Culture</div>
+    <div class="navbar">
+        <a href="home.html">Home</a>
+        <a href="#">Contact Us</a>
+        <a href="#">About Us</a>
+    </div>
+    
     <div class="container" id="authContainer">
         <span class="close-btn" onclick="this.parentElement.style.display='none'">×</span>
         <div class="button-group">
@@ -47,6 +57,58 @@
         </div>
         <div class="terms">By creating an account, you agree to our Terms & Service</div>
     </div>
-    <script src="script.js"></script>
+    <div id="particles-js"></div>
+    <script src="Scripts/login.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 80
+            },
+            "color": {
+                "value": "#ffffff"
+            },
+            "shape": {
+                "type": "circle"
+            },
+            "opacity": {
+                "value": 0.5
+            },
+            "size": {
+                "value": 3
+            },
+            "line_linked": {
+                "enable": true,
+                "distance": 150,
+                "color": "#ffffff",
+                "opacity": 0.4,
+                "width": 1
+            },
+            "move": {
+                "enable": true,
+                "speed": 3
+            }
+        },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+                "onhover": {
+                    "enable": true,
+                    "mode": "grab"
+                }
+            },
+            "modes": {
+                "grab": {
+                    "distance": 200,
+                    "line_linked": {
+                    "opacity": 0.6
+                    }
+                }
+            }
+        },
+        "retina_detect": true
+    });
+</script>
 </body>
 </html>
