@@ -1,114 +1,395 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create an Account</title>
-    <link rel="stylesheet" href="Styles/login.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Uni Culture - Login</title>
+  <link rel="stylesheet" href="Styles/login.css">
 </head>
 <body>
-    <nav>
-        <div a href="#" class="header">Uni Culture</div>
-    </nav>
-    <div class="header">Uni Culture</div>
-    <div class="navbar">
-        <a href="home.html">Home</a>
-        <a href="#">Contact Us</a>
-        <a href="#">About Us</a>
+  <div class="page-loader"></div>
+    
+  <!-- Uni Culture Branding -->
+  <div class="brand-logo">
+    <div class="brand-text">
+      <span class="brand-name">Uni Culture</span>
+    </div>
+  </div>
+
+  <!-- Un Culture Flashing Text -->
+  <div class="un-culture-flash">
+    <div class="flash-text">
+      <span class="flash-name">Uni Culture</span>
+    </div>
+  </div>
+
+  <!-- NSBM Logo on Right Side -->
+  <div class="side-logo">
+    <div class="logo-container">
+      <div class="logo-shape">
+        <div class="logo-green"></div>
+        <div class="logo-blue"></div>
+        <div class="logo-overlay-green"></div>
+        <div class="logo-overlay-blue"></div>
+        <div class="logo-figure"></div>
+        <div class="logo-circles">
+          <div class="circle circle-1"></div>
+          <div class="circle circle-2"></div>
+          <div class="circle circle-3"></div>
+          <div class="circle circle-4"></div>
+          <div class="circle circle-5"></div>
+        </div>
+      </div>
+      <div class="logo-text">
+        <div class="text-line text-nsbm">NSBM</div>
+        <div class="text-line text-green">GREEN</div>
+        <div class="text-line text-green">UNIVERSITY</div>
+        <div class="text-line text-blue">TOWN</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Round Navigation Bar -->
+  <nav class="floating-nav">
+    <div class="nav-circle">
+      <div class="nav-content">
+        <a href="" class="nav-item active">Login</a>
+        <a href="home.html" class="nav-item">Home</a>
+        <a href="#" class="nav-item">Rules & Regulations</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Raining Particles -->
+  <div class="particles-container">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+
+  <!-- NSBM Green University Book -->
+  <div class="floating-book">
+    <div class="book">
+      <div class="book-cover">
+        <div class="book-logo">
+          <div class="logo-shape">
+            <div class="logo-green"></div>
+            <div class="logo-blue"></div>
+            <div class="logo-overlay-green"></div>
+            <div class="logo-overlay-blue"></div>
+            <div class="logo-figure"></div>
+            <div class="logo-circles">
+              <div class="circle circle-1"></div>
+              <div class="circle circle-2"></div>
+              <div class="circle circle-3"></div>
+              <div class="circle circle-4"></div>
+              <div class="circle circle-5"></div>
+            </div>
+          </div>
+        </div>
+        <div class="book-title">
+          <div class="title-line title-nsbm">NSBM</div>
+          <div class="title-line title-green">GREEN</div>
+          <div class="title-line title-green">UNIVERSITY</div>
+          <div class="title-line title-blue">TOWN</div>
+        </div>
+        <div class="book-decoration"></div>
+      </div>
+      <div class="book-pages">
+        <div class="page page-1"></div>
+        <div class="page page-2"></div>
+        <div class="page page-3"></div>
+      </div>
+      <div class="book-spine">
+        <div class="spine-title">NSBM</div>
+        <div class="spine-decoration"></div>
+      </div>
+      <div class="book-back-cover"></div>
+    </div>
+  </div>
+
+  <!-- Main Login Container -->
+  <main class="login-main">
+    <div class="login-container">
+      <div class="login-card">
+        <div class="login-header">
+          <h1 class="login-title">Welcome Back</h1>
+          <p class="login-subtitle">Sign in to your Uni Culture account</p>
+        </div>
+
+        <div class="auth-tabs">
+          <button class="auth-tab active" onclick="switchTab('signin')">Sign In</button>
+          <button class="auth-tab" onclick="switchTab('signup')">Sign Up</button>
+        </div>
+
+        <!-- Sign In Form -->
+        <form id="signin-form" class="login-form active">
+          <div class="form-group">
+            <label for="signin-email">Email Address</label>
+            <input type="email" id="signin-email" required placeholder="Enter your email">
+            <div class="input-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="signin-password">Password</label>
+            <input type="password" id="signin-password" required placeholder="Enter your password">
+            <div class="input-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="form-options">
+            <label class="checkbox-container">
+              <input type="checkbox" id="remember-me">
+              <span class="checkmark"></span>
+              Remember me
+            </label>
+            <a href="#" class="forgot-password">Forgot Password?</a>
+          </div>
+
+          <button type="submit" class="login-btn">
+            <span>Sign In</span>
+            <div class="btn-loader"></div>
+          </button>
+        </form>
+
+        <!-- Sign Up Form -->
+        <form id="signup-form" class="login-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="signup-firstname">First Name</label>
+              <input type="text" id="signup-firstname" required placeholder="First name">
+              <div class="input-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                </svg>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="signup-lastname">Last Name</label>
+              <input type="text" id="signup-lastname" required placeholder="Last name">
+              <div class="input-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="signup-email">Email Address</label>
+            <input type="email" id="signup-email" required placeholder="Enter your email">
+            <div class="input-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="signup-phone">Phone Number</label>
+            <div class="phone-input-group">
+              <select id="country-code" class="country-select">
+                <option value="+94">🇱🇰 +94</option>
+                <option value="+1">🇺🇸 +1</option>
+                <option value="+91">🇮🇳 +91</option>
+                <option value="+64">🇳🇿 +64</option>
+                <option value="+61">🇦🇺 +61</option>
+                <option value="+971">🇦🇪 +971</option>
+                <option value="+46">🇸🇪 +46</option>
+                <option value="+65">🇸🇬 +65</option>
+                <option value="+45">🇩🇰 +45</option>
+                <option value="+7">🇷🇺 +7</option>
+                <option value="+1">🇨🇦 +1</option>
+                <option value="+82">🇰🇷 +82</option>
+              </select>
+              <input type="tel" id="signup-phone" required placeholder="Enter your phone number">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="signup-password">Password</label>
+            <input type="password" id="signup-password" required placeholder="Create a password">
+            <div class="input-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="signup-confirm-password">Confirm Password</label>
+            <input type="password" id="signup-confirm-password" required placeholder="Confirm your password">
+            <div class="input-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="form-options">
+            <label class="checkbox-container">
+              <input type="checkbox" id="agree-terms" required>
+              <span class="checkmark"></span>
+              I agree to the <a href="#" class="terms-link">Terms & Conditions</a>
+            </label>
+          </div>
+
+          <button type="submit" class="login-btn">
+            <span>Create Account</span>
+            <div class="btn-loader"></div>
+          </button>
+        </form>
+
+        <div class="divider">
+          <span>or continue with</span>
+        </div>
+
+        <div class="social-login">
+          <button class="social-btn google">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+              <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+              <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+              <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+            </svg>
+            <span>Google</span>
+          </button>
+          <button class="social-btn apple">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+            </svg>
+            <span>Apple</span>
+          </button>
+          <button class="social-btn facebook">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+            <span>Facebook</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <p>NSBM Green University Town is a vibrant community dedicated to fostering creativity, innovation, and cultural exchange among students.</p>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <div class="contact-info">
+          <p>📍 NSBM Green University Town, Sri Lanka</p>
+          <p>📧 info@TexL.lk</p>
+          <p>📞 +94 76 420 8280</p>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="#" class="social-link facebook">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+          <a href="#" class="social-link twitter">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+            </svg>
+          </a>
+          <a href="#" class="social-link linkedin">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
     </div>
     
-    <div class="container" id="authContainer">
-        <span class="close-btn" onclick="this.parentElement.style.display='none'">×</span>
-        <div class="button-group">
-            <button onclick="toggleAuth('sign-up')">Sign up</button>
-            <button onclick="toggleAuth('sign-in')">Sign in</button>
-        </div>
-        <h2 id="authTitle">Create an account</h2>
-        <form id="authForm" onsubmit="handleSubmit(event)">
-            <input type="text" id="firstName" value="" placeholder="First name" required>
-            <input type="text" id="lastName" placeholder="Last name" required>
-            <input type="email" id="email" placeholder="Enter your email" required>
-            <div class="phone-group">
-                <select id="countryCode" required>
-                    <option value="Sri Lanka">🇱🇰</option>
-                    <option value="USA">🇺🇸</option>
-                    <option value="India">🇮🇳</option>
-                    <option value="New Zealand">🇳🇿</option>
-                    <option value="Australia">🇦🇺</option>
-                    <option value="UAE">🇦🇪</option>
-                    <option value="Sweden">🇸🇪</option>
-                    <option value="Singapore">🇸🇬</option>
-                    <option value="Denmark">🇩🇰</option>
-                    <option value="Russia">🇷🇺</option>
-                    <option value="Canada">🇨🇦</option>
-                    <option value="Korea">🇰🇷</option>
-                </select>
-                <input type="tel" id="phone" value="" placeholder="Enter Your Number" required>
-            </div>
-            <button type="submit" class="create-btn" id="authButton">Create an account</button>
-        </form>
-        <div>OR SIGN IN WITH</div>
-        <div class="social-buttons">
-            <a href="https://www.google.com" target="_blank" class="social-btn"><img src="https://www.google.com/favicon.ico" alt="Google" style="width: 20px; height: 20px;"></a>
-            <a href="https://www.apple.com" target="_blank" class="social-btn"><img src="https://www.apple.com/favicon.ico" alt="Apple" style="width: 20px; height: 20px;"></a>
-            <a href="https://www.facebook.com" target="_blank" class="social-btn"><img src="https://www.facebook.com/favicon.ico" alt="Facebook" style="width: 20px; height: 20px;"></a>    
-            <a href="https://www.twitter.com" target="_blank" class="social-btn"><img src="https://www.twitter.com/favicon.ico" alt="Twitter" style="width: 20px; height: 20px;"></a>
-            
-        </div>
-        <div class="terms">By creating an account, you agree to our Terms & Service</div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 NSBM Green University Town. All rights reserved.</p>
     </div>
-    <div id="particles-js"></div>
-    <script src="Scripts/login.js"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script>
+  </footer>
+  <div id="particles-js"></div>
+  <script src="Scripts/login.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
         particlesJS("particles-js", {
             "particles": {
-                "number": {
-                    "value": 80
+             "number": {
+             "value": 80
             },
-            "color": {
-                "value": "#ffffff"
-            },
-            "shape": {
-                "type": "circle"
-            },
-            "opacity": {
-                "value": 0.5
-            },
-            "size": {
-                "value": 3
-            },
-            "line_linked": {
-                "enable": true,
-                "distance": 150,
-                "color": "#ffffff",
-                "opacity": 0.4,
-                "width": 1
-            },
-            "move": {
-                "enable": true,
-                "speed": 3
-            }
-        },
-        "interactivity": {
-            "detect_on": "canvas",
-            "events": {
-                "onhover": {
-                    "enable": true,
-                    "mode": "grab"
-                }
-            },
-            "modes": {
-                "grab": {
-                    "distance": 200,
-                    "line_linked": {
-                    "opacity": 0.6
-                    }
-                }
-            }
-        },
-        "retina_detect": true
-    });
+      "color": {
+        "value": "#ffffff"
+      },
+      "shape": {
+        "type": "circle"
+      },
+      "opacity": {
+        "value": 0.5
+      },
+      "size": {
+        "value": 3
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#ffffff",
+        "opacity": 0.4,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 3
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": {
+          "enable": true,
+          "mode": "grab"
+        }
+      },
+      "modes": {
+        "grab": {
+          "distance": 200,
+          "line_linked": {
+            "opacity": 0.6
+          }
+        }
+      }
+    },
+    "retina_detect": true
+  });
 </script>
 </body>
-</html>
+</html> 
