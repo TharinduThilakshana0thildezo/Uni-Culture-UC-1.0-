@@ -1,0 +1,288 @@
+.rules-page {
+  padding: 140px 10vw 80px 10vw;
+  position: relative;
+  z-index: 2;
+}
+
+.rules-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.rules-header h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.rules-header p {
+  color: #b6cfc2;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(170, 245, 194, 0.2);
+  border-radius: 999px;
+  padding: 8px 10px 8px 16px;
+}
+
+.search-bar input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #eafcf3;
+  min-width: 260px;
+}
+
+.search-button {
+  background: rgba(170, 245, 194, 0.1);
+  border: 1px solid rgba(170, 245, 194, 0.3);
+  color: var(--accent);
+  border-radius: 999px;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.search-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(170, 245, 194, 0.2);
+}
+
+.rules-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.rule-section {
+  background: rgba(255,255,255,0.02);
+  border: 1.5px solid rgba(170,245,194,0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rule-section.open {
+  border-color: var(--accent);
+  box-shadow: 0 20px 40px rgba(170,245,194,0.12);
+}
+
+.rule-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 18px;
+  background: rgba(10,13,12,0.5);
+}
+
+.rule-header h2 {
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.rule-header i {
+  color: var(--accent);
+}
+
+.rule-header h2:hover {
+  color: var(--accent);
+}
+
+.toggle-button {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(170, 245, 194, 0.08);
+  border: 1px solid rgba(170, 245, 194, 0.25);
+  color: var(--accent);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.toggle-button:hover {
+  transform: translateY(-2px);
+}
+
+.rule-content {
+  padding: 0 18px 16px 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.rule-section.open .rule-content {
+  padding-top: 8px;
+}
+
+.rule-content h3 {
+  color: var(--accent);
+  margin: 14px 0 8px 0;
+}
+
+.rule-content ul {
+  list-style: disc inside;
+  color: #b6cfc2;
+  padding-left: 10px;
+}
+
+.rule-content p {
+  color: #b6cfc2;
+}
+
+/* Make rules appear clickable */
+.rule-content li,
+.rule-content p {
+  cursor: pointer;
+}
+
+/* Modal (glass) */
+.rule-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.rule-modal.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.rule-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 13, 12, 0.55);
+  backdrop-filter: blur(6px);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.rule-modal.is-open .rule-modal__backdrop {
+  opacity: 1;
+}
+
+.rule-modal__dialog {
+  position: relative;
+  width: min(560px, 92vw);
+  margin: 12vh auto 0 auto;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(170, 245, 194, 0.25);
+  border-radius: 20px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5), 0 0 40px rgba(170, 245, 194, 0.1);
+  padding: 22px 22px 20px 22px;
+  transform: translateY(20px) scale(0.96);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.rule-modal.is-open .rule-modal__dialog {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.rule-modal__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(170, 245, 194, 0.1);
+  border: 1px solid rgba(170, 245, 194, 0.25);
+  color: var(--accent);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.rule-modal__close:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(170, 245, 194, 0.2);
+}
+
+.rule-modal__content h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.rule-modal__text {
+  color: #eafcf3;
+  line-height: 1.6;
+}
+
+/* Dust particles */
+.dust-container {
+  position: absolute;
+  inset: 0;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.dust {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(170, 245, 194, 0.9);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(170, 245, 194, 0.6);
+  opacity: 0.95;
+  filter: blur(0.2px);
+  animation: dust-move var(--dur, 600ms) ease-out var(--delay, 0ms) forwards;
+}
+
+@keyframes dust-move {
+  to {
+    transform: translate(var(--dx, 0px), var(--dy, -60px)) scale(0.4);
+    opacity: 0;
+    filter: blur(4px);
+  }
+}
+
+.rule-modal__dialog.is-dusting .rule-modal__content {
+  opacity: 0;
+}
+
+.rule-modal__dialog.is-dusting {
+  transform: translateY(0) scale(0.98);
+  filter: blur(1px) brightness(0.95);
+}
+
+/* Vanish animation on close */
+@keyframes rule-vanish {
+  to {
+    opacity: 0;
+    transform: translateY(10px) scale(0.92);
+    filter: blur(6px);
+  }
+}
+
+.rule-modal.is-closing .rule-modal__dialog {
+  animation: rule-vanish 0.25s ease forwards;
+}
+
+.rule-modal.is-closing .rule-modal__backdrop {
+  opacity: 0;
+}
+
+@media (max-width: 600px) {
+  .rules-page { padding: 110px 5vw 60px 5vw; }
+  .search-bar input { min-width: 160px; }
+}
+
