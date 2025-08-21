@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Senior-Junior Network - University Culture Portal</title>
+  <link rel="stylesheet" href="Styles/background.css" />
+  <link rel="stylesheet" href="Styles/sjn.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="page-loader"></div>
+
+  <!-- Uni Culture Branding (reused) -->
+  <div class="brand-logo visible">
+    <div class="brand-text">
+      <span class="brand-name">Uni Culture</span>
+    </div>
+  </div>
+
+  <!-- Floating Round Navigation Bar (reused) -->
+  <nav class="floating-nav">
+    <div class="nav-circle visible">
+      <div class="nav-content">
+        <a href="home.html" class="nav-item">Home</a>
+        <a href="rules.html" class="nav-item">Clubs &amp; Societies</a>
+        <a href="#" class="nav-item">Rules &amp; Regulations</a>
+        <a href="#" class="nav-item">Resources</a>
+        <a href="senior-junior.html" class="nav-item active">Senior-Junior Network</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Particle Background (local variant) -->
+  <div class="particles-container">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="sjn-hero">
+    <div class="sjn-hero-content">
+      <h1 class="sjn-hero-title">
+        <span class="gradient-text">Senior-Junior</span>
+        <span class="gradient-text">Network</span>
+      </h1>
+      <p class="sjn-hero-subtitle">Connect, Learn, and Grow Together</p>
+      <div class="hero-buttons">
+        <button class="btn btn-primary">Find a Mentor</button>
+        <button class="btn btn-secondary">Become a Mentor</button>
+      </div>
+    </div>
+    <div class="sjn-hero-visual">
+      <div class="floating-cards">
+        <div class="card card-1">
+          <i class="fas fa-graduation-cap"></i>
+          <span>Mentorship</span>
+        </div>
+        <div class="card card-2">
+          <i class="fas fa-users"></i>
+          <span>Community</span>
+        </div>
+        <div class="card card-3">
+          <i class="fas fa-lightbulb"></i>
+          <span>Knowledge</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="container">
+      <h2 class="section-title">Why Join Our Network?</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-handshake"></i></div>
+          <h3>Mentorship Programs</h3>
+          <p>Connect with experienced seniors who can guide you through your academic and career journey.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-network-wired"></i></div>
+          <h3>Networking Opportunities</h3>
+          <p>Build valuable connections with peers and professionals in your field of interest.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-book-open"></i></div>
+          <h3>Knowledge Sharing</h3>
+          <p>Access to study materials, project insights, and real-world experiences from seniors.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-calendar-alt"></i></div>
+          <h3>Regular Events</h3>
+          <p>Participate in workshops, seminars, and social events to enhance your skills.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mentors Section -->
+  <section class="mentors">
+    <div class="container">
+      <h2 class="section-title">Featured Mentors</h2>
+      <div class="mentors-grid">
+        <div class="mentor-card">
+          <div class="mentor-image">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Mentor 1" />
+            <div class="mentor-overlay">
+              <div class="mentor-social">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="mentor-info">
+            <h3>Alex Johnson</h3>
+            <p class="mentor-role">Software Engineering</p>
+            <p class="mentor-description">Senior developer with 5+ years experience in web development and AI.</p>
+            <div class="mentor-skills">
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Python</span>
+            </div>
+            <button class="btn btn-outline">Connect</button>
+          </div>
+        </div>
+
+        <div class="mentor-card">
+          <div class="mentor-image">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=500&q=60" alt="Mentor 2" />
+            <div class="mentor-overlay">
+              <div class="mentor-social">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="mentor-info">
+            <h3>Sarah Chen</h3>
+            <p class="mentor-role">Data Science</p>
+            <p class="mentor-description">Data scientist specializing in machine learning and statistical analysis.</p>
+            <div class="mentor-skills">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">TensorFlow</span>
+              <span class="skill-tag">SQL</span>
+            </div>
+            <button class="btn btn-outline">Connect</button>
+          </div>
+        </div>
+
+        <div class="mentor-card">
+          <div class="mentor-image">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Mentor 3" />
+            <div class="mentor-overlay">
+              <div class="mentor-social">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="mentor-info">
+            <h3>Michael Rodriguez</h3>
+            <p class="mentor-role">Business Analytics</p>
+            <p class="mentor-description">Business analyst with expertise in market research and strategy.</p>
+            <div class="mentor-skills">
+              <span class="skill-tag">Excel</span>
+              <span class="skill-tag">Tableau</span>
+              <span class="skill-tag">R</span>
+            </div>
+            <button class="btn btn-outline">Connect</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events Section -->
+  <section class="events">
+    <div class="container">
+      <h2 class="section-title">Upcoming Events</h2>
+      <div class="events-grid">
+        <div class="event-card">
+          <div class="event-date">
+            <span class="day">15</span>
+            <span class="month">Dec</span>
+          </div>
+          <div class="event-content">
+            <h3>Career Planning Workshop</h3>
+            <p>Learn how to plan your career path and make informed decisions about your future.</p>
+            <div class="event-meta">
+              <span><i class="fas fa-clock"></i> 2:00 PM</span>
+              <span><i class="fas fa-map-marker-alt"></i> Room 301</span>
+            </div>
+            <button class="btn btn-primary">Register</button>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-date">
+            <span class="day">20</span>
+            <span class="month">Dec</span>
+          </div>
+          <div class="event-content">
+            <h3>Networking Mixer</h3>
+            <p>Connect with seniors and juniors in a relaxed social setting with refreshments.</p>
+            <div class="event-meta">
+              <span><i class="fas fa-clock"></i> 6:00 PM</span>
+              <span><i class="fas fa-map-marker-alt"></i> Student Lounge</span>
+            </div>
+            <button class="btn btn-primary">Register</button>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-date">
+            <span class="day">25</span>
+            <span class="month">Dec</span>
+          </div>
+          <div class="event-content">
+            <h3>Technical Skills Workshop</h3>
+            <p>Hands-on workshop on modern programming languages and development tools.</p>
+            <div class="event-meta">
+              <span><i class="fas fa-clock"></i> 10:00 AM</span>
+              <span><i class="fas fa-map-marker-alt"></i> Lab 205</span>
+            </div>
+            <button class="btn btn-primary">Register</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <div class="container">
+      <h2 class="section-title">Get in Touch</h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h3>Email</h3>
+              <p>network@nsbm.ac.lk</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <h3>Phone</h3>
+              <p>+94 011 244 5000</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h3>Location</h3>
+              <p>NSBM University, Colombo</p>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form">
+          <div class="form-group">
+            <input type="text" placeholder="Your Name" required />
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Your Email" required />
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Subject" required />
+          </div>
+          <div class="form-group">
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Senior-Junior Network</h3>
+          <p>Building bridges between experience and potential through meaningful connections.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Find a Mentor</a></li>
+            <li><a href="#">Become a Mentor</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Resources</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="#">Study Materials</a></li>
+            <li><a href="#">Career Guide</a></li>
+            <li><a href="#">Project Ideas</a></li>
+            <li><a href="#">Interview Tips</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 NSBM Green University. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="Scripts/background.js"></script>
+  <script src="Scripts/sjn.js"></script>
+</body>
+</html>
+
