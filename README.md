@@ -1,1 +1,1 @@
-# Uni-Culture-UC-1.0-
+# Uni-Culture-UC-1.0
