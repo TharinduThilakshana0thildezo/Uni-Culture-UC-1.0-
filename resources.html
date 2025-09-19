@@ -96,6 +96,23 @@
         <input id="resourceSearch" type="text" placeholder="Search resources...">
         <button class="search-button" id="resourceSearchBtn"><i class="fas fa-search"></i></button>
       </div>
+      <div class="hero-tabs">
+        <button class="hero-tab" data-topic="study"><i class="fas fa-book"></i> Study Materials</button>
+        <button class="hero-tab" data-topic="tools"><i class="fas fa-tools"></i> Learning Tools</button>
+        <button class="hero-tab" data-topic="career"><i class="fas fa-briefcase"></i> Career</button>
+        <button class="hero-tab" data-topic="kuppi"><i class="fas fa-comments"></i> Kuppi Sessions</button>
+      </div>
+
+      <div class="hero-screen" id="heroScreen" aria-hidden="true">
+        <div class="hero-screen-inner">
+          <header class="hero-screen-header">
+            <h3 id="heroScreenTitle">Resources</h3>
+            <nav class="hero-subtabs" id="heroSubtabs"></nav>
+            <button class="hero-screen-close" id="heroScreenClose" aria-label="Close">×</button>
+          </header>
+          <div class="hero-screen-body" id="heroScreenBody"></div>
+        </div>
+      </div>
     </section>
 
     <section class="resources-container">
@@ -226,7 +243,7 @@
               <li>Modules</li>
               <li>Lecture revisions</li>
             </ul>
-            <a href="#" class="resource-link">View Servers</a>
+            <a href="https://discord.com/" class="resource-link" target="_blank" rel="noopener">View Servers</a>
           </div>
           <div class="resource-card" data-search="chatrooms industrial expert senior kuppi knowledge">
             <h3>Chatrooms</h3>
@@ -234,13 +251,13 @@
             <ul>
               <li>Industrial knowledge</li>
             </ul>
-            <a href="#" class="resource-link">Access Services</a>
+            <a href="https://discord.com/" class="resource-link" target="_blank" rel="noopener">Access Services</a>
           </div>
           <div class="resource-card" data-search="student problems peer support chatrooms connect help">
             <h3>Student problems with students</h3>
             <p>Connect via chatrooms</p>
             <ul></ul>
-            <a href="#" class="resource-link">Join Network</a>
+            <a href="https://discord.com/" class="resource-link" target="_blank" rel="noopener">Join Network</a>
           </div>
         </div>
       </section>
