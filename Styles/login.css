@@ -21,7 +21,7 @@ body {
 /* Page Loader */
 .page-loader {
   position: fixed;
-  z-index: 9999;
+  z-index: 9999;      
   inset: 0;
   background: #0a0d0c;
   opacity: 1;
@@ -784,7 +784,7 @@ body.loaded .page-loader {
 
 .form-group label {
   display: block;
-  color: #b6cfc2;
+  color: #15dd75;
   font-size: 0.9rem;
   font-weight: 600;
   margin-bottom: 8px;
@@ -799,7 +799,7 @@ body.loaded .page-loader {
   background: rgba(255, 255, 255, 0.05);
   border: 1.5px solid rgba(170, 245, 194, 0.2);
   border-radius: 12px;
-  color: #eafcf3;
+  color: #12c66c;
   font-size: 1rem;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   backdrop-filter: blur(10px);
