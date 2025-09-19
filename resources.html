@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Uni Culture • Resources</title>
+  <link rel="stylesheet" href="Styles/home.css">
+  <link rel="stylesheet" href="Styles/resources.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="page-loader"></div>
+
+  <div class="brand-logo visible">
+    <div class="brand-text">
+      <span class="brand-name">Uni Culture</span>
+    </div>
+  </div>
+
+  <div class="un-culture-flash">
+    <div class="flash-text">
+      <span class="flash-name">Uni Culture</span>
+    </div>
+  </div>
+
+  <div class="side-logo">
+    <div class="logo-container">
+      <div class="logo-shape">
+        <div class="logo-green"></div>
+        <div class="logo-blue"></div>
+        <div class="logo-overlay-green"></div>
+        <div class="logo-overlay-blue"></div>
+        <div class="logo-figure"></div>
+        <div class="logo-circles">
+          <div class="circle circle-1"></div>
+          <div class="circle circle-2"></div>
+          <div class="circle circle-3"></div>
+          <div class="circle circle-4"></div>
+          <div class="circle circle-5"></div>
+        </div>
+      </div>
+      <div class="logo-text">
+        <div class="text-line text-nsbm">NSBM</div>
+        <div class="text-line text-green">GREEN</div>
+        <div class="text-line text-green">UNIVERSITY</div>
+        <div class="text-line text-blue">TOWN</div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="floating-nav">
+    <div class="nav-circle">
+      <div class="nav-content">
+        <a href="home.html" class="nav-item">Home</a>
+        <a href="club.html" class="nav-item">Clubs & Societies</a>
+        <a href="rules.html" class="nav-item">Rules & Regulations</a>
+        <a href="resources.html" class="nav-item active">Resources</a>
+        <a href="senior-junior.html" class="nav-item">Senior-Junior Network</a>
+        <a href="finance.html" class="nav-item">Finance</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="particles-container">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+
+  <main class="resources-page">
+    
+    <section class="resources-header reveal">
+      <h1 class="reveal-text">Learning Resources</h1>
+      <p class="reveal-text">Access study materials, tools, and career opportunities</p>
+      <div class="search-bar">
+        <input id="resourceSearch" type="text" placeholder="Search resources...">
+        <button class="search-button" id="resourceSearchBtn"><i class="fas fa-search"></i></button>
+      </div>
+      <div class="hero-tabs">
+        <button class="hero-tab" data-topic="study"><i class="fas fa-book"></i> Study Materials</button>
+        <button class="hero-tab" data-topic="tools"><i class="fas fa-tools"></i> Learning Tools</button>
+        <button class="hero-tab" data-topic="career"><i class="fas fa-briefcase"></i> Career</button>
+        <button class="hero-tab" data-topic="kuppi"><i class="fas fa-comments"></i> Kuppi Sessions</button>
+      </div>
+
+      <div class="hero-screen" id="heroScreen" aria-hidden="true">
+        <div class="hero-screen-inner">
+          <header class="hero-screen-header">
+            <h3 id="heroScreenTitle">Resources</h3>
+            <nav class="hero-subtabs" id="heroSubtabs"></nav>
+            <button class="hero-screen-close" id="heroScreenClose" aria-label="Close">×</button>
+          </header>
+          <div class="hero-screen-body" id="heroScreenBody"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="resources-container">
+      <section class="resource-section">
+        <h2><i class="fas fa-book"></i> Study Materials</h2>
+        <div class="resource-grid">
+          <div class="resource-card" data-search="lecture notes computer science engineering business arts sciences">
+            <h3>Lecture Notes</h3>
+            <p>Access comprehensive lecture notes from various departments</p>
+            <ul>
+              <li>Computer Science</li>
+              <li>Engineering</li>
+              <li>Business</li>
+              <li>Arts & Sciences</li>
+            </ul>
+            <a href="#" class="resource-link">Browse Notes</a>
+          </div>
+          <div class="resource-card" data-search="past papers previous questions mid term final exams practice tests solutions">
+            <h3>Past Papers</h3>
+            <p>Previous year question papers and solutions</p>
+            <ul>
+              <li>Mid-term Exams</li>
+              <li>Final Exams</li>
+              <li>Practice Tests</li>
+              <li>Sample Solutions</li>
+            </ul>
+            <a href="#" class="resource-link">View Papers</a>
+          </div>
+          <div class="resource-card" data-search="research papers ieee science direct google scholar university repository journals publications">
+            <h3>Research Papers</h3>
+            <p>Access academic journals and research publications</p>
+            <ul>
+              <li>IEEE Papers</li>
+              <li>Science Direct</li>
+              <li>Google Scholar</li>
+              <li>University Repository</li>
+            </ul>
+            <a href="#" class="resource-link">Explore Papers</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="resource-section">
+        <h2><i class="fas fa-tools"></i> Learning Tools</h2>
+        <div class="resource-grid">
+          <div class="resource-card" data-search="online courses coursera edx udemy linkedin learning">
+            <h3>Online Courses</h3>
+            <p>Free and paid online learning resources</p>
+            <ul>
+              <li>Coursera</li>
+              <li>edX</li>
+              <li>Udemy</li>
+              <li>LinkedIn Learning</li>
+            </ul>
+            <a href="#" class="resource-link">View Courses</a>
+          </div>
+          <div class="resource-card" data-search="software tools microsoft office adobe creative suite ides statistical software">
+            <h3>Software & Tools</h3>
+            <p>Access to educational software and development tools</p>
+            <ul>
+              <li>Microsoft Office 365</li>
+              <li>Adobe Creative Suite</li>
+              <li>Development IDEs</li>
+              <li>Statistical Software</li>
+            </ul>
+            <a href="#" class="resource-link">Access Tools</a>
+          </div>
+          <div class="resource-card" data-search="library resources ebooks academic databases digital archives reference materials">
+            <h3>Library Resources</h3>
+            <p>Digital library and database access</p>
+            <ul>
+              <li>E-books</li>
+              <li>Academic Databases</li>
+              <li>Digital Archives</li>
+              <li>Reference Materials</li>
+            </ul>
+            <a href="#" class="resource-link">Visit Library</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="resource-section">
+        <h2><i class="fas fa-briefcase"></i> Career Resources</h2>
+        <div class="resource-grid">
+          <div class="resource-card" data-search="job board internships part time full time research opportunities nforce">
+            <h3>Job Board</h3>
+            <p>Latest internship and job opportunities</p>
+            <ul>
+              <li>Nforce portal</li>
+              <li>Part-time Jobs</li>
+              <li>Full-time Positions</li>
+              <li>Research Opportunities</li>
+            </ul>
+            <a href="#" class="resource-link">View Jobs</a>
+          </div>
+          <div class="resource-card" data-search="career services resume interview preparation counseling workshops professional development">
+            <h3>Career Services</h3>
+            <p>Professional development resources</p>
+            <ul>
+              <li>Resume Building</li>
+              <li>Interview Prep</li>
+              <li>Career Counseling</li>
+              <li>Workshops</li>
+            </ul>
+            <a href="#" class="resource-link">Access Services</a>
+          </div>
+          <div class="resource-card" data-search="alumni network mentorship networking events success stories industry insights">
+            <h3>Alumni Network</h3>
+            <p>Connect with successful graduates</p>
+            <ul>
+              <li>Mentorship Program</li>
+              <li>Networking Events</li>
+              <li>Success Stories</li>
+              <li>Industry Insights</li>
+            </ul>
+            <a href="#" class="resource-link">Join Network</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="resource-section">
+        <h2><i class="fas fa-comments"></i> Kuppi Sessions</h2>
+        <div class="resource-grid">
+          <div class="resource-card" data-search="discord servers modules lecture revisions junior teaching">
+            <h3>Discord Servers</h3>
+            <p>Teaching process for juniors</p>
+            <ul>
+              <li>Modules</li>
+              <li>Lecture revisions</li>
+            </ul>
+            <a href="https://discord.com/" class="resource-link" target="_blank" rel="noopener">View Servers</a>
+          </div>
+          <div class="resource-card" data-search="chatrooms industrial expert senior kuppi knowledge">
+            <h3>Chatrooms</h3>
+            <p>Industrial expert senior's kuppi</p>
+            <ul>
+              <li>Industrial knowledge</li>
+            </ul>
+            <a href="https://discord.com/" class="resource-link" target="_blank" rel="noopener">Access Services</a>
+          </div>
+          <div class="resource-card" data-search="student problems peer support chatrooms connect help">
+            <h3>Student problems with students</h3>
+            <p>Connect via chatrooms</p>
+            <ul></ul>
+            <a href="https://discord.com/" class="resource-link" target="_blank" rel="noopener">Join Network</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="resource-section">
+        <h2><i class="fas fa-lightbulb"></i> Future Discoveries</h2>
+        <div class="resource-grid">
+          <div class="resource-card" data-search="future ideas discoveries software technology art innovations">
+            <h3>Future ideas and discoveries</h3>
+            <ul>
+              <li>Softwares</li>
+              <li>Ideas</li>
+              <li>Technology</li>
+              <li>Art</li>
+            </ul>
+            <a href="#" class="resource-link">Explore</a>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <p>NSBM Green University Town is a vibrant community dedicated to fostering creativity, innovation, and cultural exchange among students.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <div class="contact-info">
+          <p>📍 NSBM Green University Town, Sri Lanka</p>
+          <p>📧 info@TexL.lk</p>
+          <p>📞 +94 76 420 8280</p>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="#" class="social-link facebook"></a>
+          <a href="#" class="social-link twitter"></a>
+          <a href="#" class="social-link linkedin"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 NSBM Green University Town. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="Scripts/home.js"></script>
+  <script src="Scripts/resources.js" defer></script>
+</body>
+</html>
+
+
