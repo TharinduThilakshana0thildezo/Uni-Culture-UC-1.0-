@@ -64,6 +64,49 @@
     </div>
   </nav>
 
+  <!-- Event hero banner: appears only when an event is selected -->
+  <div class="event-hero-bar" id="eventHeroBar">
+    <div class="event-hero-media" id="eventHeroMedia" role="img" aria-label="Event banner"></div>
+    <div class="event-cards">
+      <div class="event-card active" data-event="fest" data-img="Assets/events/fest.jpg">
+        <div class="event-thumb" style="background-image:url('')"></div>
+        <div class="event-title">Cultural Fest 2024</div>
+        <div class="event-meta">Oct 12 - Oct 18 · Main Arena</div>
+        <div class="event-summary">Budget: Rs 300,000 · Expected: 2.5k attendees</div>
+      </div>
+      <div class="event-card" data-event="sports" data-img="Assets/events/sports.jpg">
+        <div class="event-thumb" style="background-image:url('Assets/events/sports.jpg')"></div>
+        <div class="event-title">Inter-University Sports</div>
+        <div class="event-meta">Nov 02 - Nov 05 · Sports Complex</div>
+        <div class="event-summary">Budget: Rs 180,000 · Teams: 14</div>
+      </div>
+      <div class="event-card" data-event="research" data-img="Assets/events/research.jpg">
+        <div class="event-thumb" style="background-image:url('Assets/events/research.jpg')"></div>
+        <div class="event-title">Research Expo</div>
+        <div class="event-meta">Dec 10 - Dec 12 · Innovation Hall</div>
+        <div class="event-summary">Budget: Rs 220,000 · Projects: 60+</div>
+      </div>
+      <div class="event-card" data-event="orientation" data-img="Assets/events/orientation.jpg">
+        <div class="event-thumb" style="background-image:url('Assets/events/orientation.jpg')"></div>
+        <div class="event-title">Orientation Day</div>
+        <div class="event-meta">Jan 05 · Main Auditorium</div>
+        <div class="event-summary">Budget: Rs 120,000 · New students: 900+</div>
+      </div>
+      <div class="event-card" data-event="alumni" data-img="Assets/events/alumni.jpg">
+        <div class="event-thumb" style="background-image:url('Assets/events/alumni.jpg')"></div>
+        <div class="event-title">Alumni Meetup</div>
+        <div class="event-meta">Feb 18 · Convention Center</div>
+        <div class="event-summary">Budget: Rs 150,000 · Guests: 500+</div>
+      </div>
+      <div class="event-card" data-event="tech" data-img="Assets/events/tech.jpg">
+        <div class="event-thumb" style="background-image:url('Assets/events/tech.jpg')"></div>
+        <div class="event-title">Tech Summit</div>
+        <div class="event-meta">Mar 22 - Mar 23 · Innovation Hall</div>
+        <div class="event-summary">Budget: Rs 350,000 · Speakers: 30+</div>
+      </div>
+    </div>
+  </div>
+
   <div class="particles-container">
     <div class="particle"></div>
     <div class="particle"></div>
@@ -93,23 +136,6 @@
         <h2 class="hero-subtitle reveal-text">Financial Management</h2>
         <h1 class="hero-title reveal-text"><span class="title-word">MANAGE</span> <span class="title-word accent">YOUR FINANCES</span></h1>
         <p class="hero-description reveal-text">Track fees, payments, scholarships and budgets in one sleek dashboard.</p>
-        <div class="event-cards">
-          <div class="event-card active" data-event="fest">
-            <div class="event-title">Cultural Fest 2024</div>
-            <div class="event-meta">Oct 12 - Oct 18 · Main Arena</div>
-            <div class="event-summary">Budget: Rs 300,000 · Expected: 2.5k attendees</div>
-          </div>
-          <div class="event-card" data-event="sports">
-            <div class="event-title">Inter-University Sports</div>
-            <div class="event-meta">Nov 02 - Nov 05 · Sports Complex</div>
-            <div class="event-summary">Budget: Rs 180,000 · Teams: 14</div>
-          </div>
-          <div class="event-card" data-event="research">
-            <div class="event-title">Research Expo</div>
-            <div class="event-meta">Dec 10 - Dec 12 · Innovation Hall</div>
-            <div class="event-summary">Budget: Rs 220,000 · Projects: 60+</div>
-          </div>
-        </div>
         <div class="finance-search">
           <input id="financeSearch" type="text" placeholder="Search fees, scholarships, tips...">
           <button class="hero-cta" id="searchBtn">Search</button>

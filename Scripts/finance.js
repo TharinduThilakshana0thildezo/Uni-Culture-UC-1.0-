@@ -9,6 +9,8 @@ window.addEventListener('DOMContentLoaded', () => {
   const incomeEl = document.getElementById('incomeValue');
   const expenseEl = document.getElementById('expenseValue');
   const creditEl = document.getElementById('creditValue');
+  const heroMedia = document.getElementById('eventHeroMedia');
+  const heroBar = document.getElementById('eventHeroBar');
 
   let transactions = [
     { name: 'Paypal', date: 'Aug 8 · 11:55 AM', amount: -12.89, type: 'spending' },
@@ -68,6 +70,37 @@ window.addEventListener('DOMContentLoaded', () => {
       ],
       spark: [0.8,1.1,1.3,1.6,2.0,2.3,2.9,3.1,3.6,3.8,4.0,4.6,4.9,5.2,5.8,6.0,6.3,6.9,7.1,7.6],
       budget: [2600,2400,2200,2800,2300]
+    }
+    ,
+    orientation: {
+      total: 'Rs:14,250.00', income: 'Rs:5,200.00', expense: 'Rs:3,950.00', credit: 'Rs:1,100.00',
+      tx: [
+        { name: 'Welcome Packs', date: 'Jan 04 · 16:00', amount: -1450, type: 'spending' },
+        { name: 'Sponsors', date: 'Jan 03 · 10:00', amount: 3000, type: 'income' },
+        { name: 'Catering', date: 'Jan 05 · 12:40', amount: -1200, type: 'spending' }
+      ],
+      spark: [0.6,0.7,0.9,1.1,1.3,1.2,1.6,1.7,1.9,2.0,2.2,2.5,2.7,2.6,2.9,3.2,3.0,3.3,3.6,3.8],
+      budget: [1800,1600,1500,1400,1300]
+    },
+    alumni: {
+      total: 'Rs:22,300.00', income: 'Rs:11,400.00', expense: 'Rs:7,800.00', credit: 'Rs:3,100.00',
+      tx: [
+        { name: 'Tickets', date: 'Feb 16 · 11:20', amount: 5200, type: 'income' },
+        { name: 'Hall Rent', date: 'Feb 17 · 09:00', amount: -3900, type: 'spending' },
+        { name: 'Sponsorship', date: 'Feb 15 · 14:10', amount: 4200, type: 'income' }
+      ],
+      spark: [1.0,1.3,1.5,1.4,1.8,2.1,2.0,2.5,2.7,2.6,3.0,3.4,3.2,3.6,3.8,4.0,3.9,4.2,4.5,4.7],
+      budget: [2600,2500,2400,2200,2100]
+    },
+    tech: {
+      total: 'Rs:28,900.00', income: 'Rs:15,800.00', expense: 'Rs:10,900.00', credit: 'Rs:2,200.00',
+      tx: [
+        { name: 'Expo Booths', date: 'Mar 20 · 10:00', amount: 7800, type: 'income' },
+        { name: 'A/V Systems', date: 'Mar 21 · 13:30', amount: -5400, type: 'spending' },
+        { name: 'Keynote Sponsor', date: 'Mar 21 · 16:40', amount: 4200, type: 'income' }
+      ],
+      spark: [1.2,1.4,1.6,1.8,2.0,2.5,2.2,2.9,3.2,3.0,3.6,4.1,3.9,4.4,4.9,5.3,5.1,5.6,6.0,6.4],
+      budget: [3000,3400,3200,3600,3800]
     }
   };
 
@@ -155,8 +188,30 @@ window.addEventListener('DOMContentLoaded', () => {
       renderTransactions(active ? active.dataset.filter : 'all', (input?.value || '').trim().toLowerCase());
       if (sparkChart) { sparkChart.data.datasets[0].data = data.spark; sparkChart.update(); }
       if (budgetChart) { budgetChart.data.datasets[0].data = data.budget; budgetChart.update(); }
+      // Swap hero media background
+      const src = card.getAttribute('data-img');
+      if (heroMedia && src) {
+        if (heroBar) heroBar.classList.remove('is-hidden');
+        heroMedia.classList.remove('bg');
+        // fade switch
+        heroMedia.style.opacity = '0';
+        setTimeout(() => {
+          heroMedia.style.backgroundImage = `url('${src}')`;
+          heroMedia.classList.add('bg');
+          heroMedia.style.transition = 'opacity 400ms ease';
+          heroMedia.style.opacity = '1';
+        }, 150);
+      }
     });
   });
+
+  // Initialize hero media with first card
+  const firstCard = document.querySelector('.event-card');
+  const initSrc = firstCard ? firstCard.getAttribute('data-img') : null;
+  if (heroMedia && initSrc) {
+    heroMedia.style.backgroundImage = `url('${initSrc}')`;
+    heroMedia.classList.add('bg');
+  }
 });
 
 
