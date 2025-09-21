@@ -1,5 +1,3 @@
-# Uni-Culture-UC-1.0
-
 # Uni Culture (UC 1.0)
 
 Uni Culture (UC) is a web application for NSBM Green University Town, aiming to provide a platform for students, staff, and business users to engage in community & culture-related activities.
