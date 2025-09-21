@@ -99,11 +99,11 @@ Specify the license under which the project is released, e.g. MIT, Apache 2.0, e
 Contact
 For questions or discussions:
 
-Email: info@TexL.lk
+Email: thilakshanatexl@gmail.com
 
 Phone: +94 76 420 8280
 
-Location: NSBM Green University Town, Sri Lanka
+Location: Kegalle/ Ethnawala,Warakapola, Sri Lanka
 
 This README was generated based on the live site as of September 2025. Details like build tools, dependencies, or backend services should be added as relevant.
 
