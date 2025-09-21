@@ -33,57 +33,84 @@ body.loaded .page-loader {
   pointer-events: none;
 }
 
-/* Uni Culture Branding */
-.brand-logo {
+/* Wrapper to hold logo + nav together */
+.un-culture-flash, 
+.floating-nav {
+  display: inline-block;
+  vertical-align: middle; /* keeps them level */
+}
+
+/* Logo styling */
+.un-culture-flash {
+  margin-left: 50px; /* gap between logo and nav */
+}
+
+.flash-image {
+  height: 75px;  /* adjust as needed */
+  width: auto;
+  animation: flash 6.5s infinite alternate;
+  cursor: pointer;
+}
+
+/* Flash animation */
+@keyframes flash {
+  0% { opacity: 5; }
+  100% { opacity: 5.5; }
+}
+
+/* Un Culture Flashing Text */
+.un-culture-flash {
   position: fixed;
-  top: 10px;
-  left: 20px;
-  z-index: 1000;
+  top: 20px;
+  left: 2px;
+  z-index: 999;
   opacity: 0;
   transform: translateY(-20px);
   transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
 }
 
-.brand-logo.visible {
+.un-culture-flash.visible {
   opacity: 1;
   transform: translateY(0px);
 }
 
-.brand-text {
-  background: rgba(10, 13, 12, 0.8);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(170, 245, 194, 0.2);
-  border-radius: 15px;
-  padding: 5px 20px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+
+.flash-text::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 70%;
+  height: 70%;
+  background: linear-gradient(90deg, transparent, rgba(170, 245, 194, 0.15), transparent);
+  transition: left 0.8s ease;
 }
 
-.brand-text:hover {
-  border-color: var(--accent);
-  box-shadow: 0 12px 40px rgba(170, 245, 194, 0.2);
-  transform: translateY(-2px);
+.flash-text:hover::before {
+  left: 100%;
 }
 
-.brand-uni {
-  font-size: 1.4rem;
-  font-weight: 800;
+.flash-name {
+  font-size: 2rem;
+  font-weight: 900;
   color: var(--accent);
-  letter-spacing: 0.05em;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.1em;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), 0 0 15px rgba(170, 245, 194, 0.4);
+  white-space: nowrap;
+  position: relative;
+  z-index: 2;
+  animation: pulse-glow 2s ease-in-out infinite;
 }
 
-.brand-culture {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #eafcf3;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  opacity: 0.9;
+@keyframes pulse-glow {
+  0%, 100% { 
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), 0 0 15px rgba(170, 245, 194, 0.4);
+  }
+  50% { 
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), 0 0 25px rgba(170, 245, 194, 0.6);
+  }
 }
 
 /* NSBM Logo on Right Side */
